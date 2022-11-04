@@ -13,7 +13,7 @@ import CheckoutForm from "../app/(components)/CheckoutForm";
 
 export async function getStaticPaths(){
     const paths = await fetch("https://undefxx.com/api/payments/paths").then(x => x.json())
-    return {paths: paths, fallback: false}
+    return {paths: paths, fallback: true}
 }
 
 export async function getStaticProps(context){
